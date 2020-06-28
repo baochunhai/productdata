@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+### 数据配置
+spring:
+  datasource:
+    sqlserver:
+      jdbc-url: jdbc:sqlserver://127.0.0.1:1435;database=wisdom;
+      username: sa
+      password: sb12306
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    oracle:
+      jdbc-url: jdbc:oracle:thin:@localhost:1521/orcl
+      username: system
+      password: y791019c
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
