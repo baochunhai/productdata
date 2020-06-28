@@ -26,9 +26,9 @@ public class ScheduledTasks {
     @Scheduled(cron = "0/1 * * * * * ")
     public void cdata(){
         List<Worker> workers = scheService.queryWorker();
-        workers.forEach(worker -> {
-            System.out.println(worker.getOperationname());
-        });
+        for (int i = 0; i < workers.size(); i++) {
+            System.out.println(workers.get(0).getOperationname());
+        }
         System.out.println("test");
     }
 }

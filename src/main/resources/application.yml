@@ -5,9 +5,9 @@ server:
 spring:
   datasource:
     sqlserver:
-      jdbc-url: jdbc:sqlserver://127.0.0.1:1435;database=wisdom;
-      username: sa
-      password: sb12306
+      jdbc-url: jdbc:sqlserver://127.0.0.1:1433;database=wisdom;
+      username: system
+      password: y791019c
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     oracle:
       jdbc-url: jdbc:oracle:thin:@localhost:1521/orcl
